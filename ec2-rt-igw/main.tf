@@ -83,6 +83,9 @@ resource "aws_instance" "appserver" {
     subnet_id = aws_subnet.Redsubnet.id
     vpc_security_group_ids = [aws_security_group.redsg1.id]
     key_name = "server-key-pair"
+    tags = {
+      "Name" = "${var.env}-AppServer"
+    }
 }
 output "vpcid" {
     value = aws_vpc.redvpc.id
