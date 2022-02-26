@@ -1,1 +1,2 @@
 ec2-rt-igw/.terraform/*
+tfvars/.terraform/*
